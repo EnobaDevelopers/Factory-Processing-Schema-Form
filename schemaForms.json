@@ -1,0 +1,66 @@
+{
+	"transferSchemas" : [
+		{
+			"categoryId" : "sameBank",
+			"categoryDisplayName" : "Transferencia Mismo Banco",
+			"schema": {
+				"x-placeholder" : {
+					"amount" : "Monto",
+					"concept" : "Concepto"
+				},
+				"type": "object",
+				"properties": {
+					"amount": {
+						"type": "number",
+						"required": true
+					},
+					"concept": {
+						"type": "string"
+					}
+				}
+			}
+		},
+		{
+			"categoryId": "wireTransfer",
+			"categoryDisplayName" : "Pagos TDC",
+			"schema" :  {
+				"x-condition" : {
+					"otherAmount" : "model.amount==-1"
+				},
+				"x-placeholder": {
+					"otherAmount" : "Monto"
+				},
+				"x-type" : {
+					"amount" : "radios"
+				},
+				"x-titleMap": {
+					"amount" :  [
+						{
+							"value": 18300,
+							"name": "Saldo Total - Bs. 18.300,00"
+						},
+						{
+							"value": 1300,
+							"name": "Saldo Mínimo - Bs. 1.300,00"
+						},
+						{
+							"name" : "Otro Monto",
+							"value": -1
+						}
+					]
+				},
+				"type": "object",
+				"properties": {
+					"amount": {
+						"type": "radios",
+						"default": 1300
+					},
+					"otherAmount": {
+						"type" : "number",
+						"required": true
+					}
+				}
+			}
+		}
+	]
+}
