@@ -1,6 +1,6 @@
 #Factory para armar schemas y formalarios de "Angular schema form"
 
-Este repositorio contiene un script cuyo propósito es armar formularios y schemas basados en la respuesta de los servicios relacionados con ["angular schema form"](http://schemaform.io/).
+Este repositorio contiene un script cuyo propósito es armar formularios y schemas basados en la respuesta de los servicios relacionados con ["angular schema form"](http://schemaform.io/). En el proyecto "Internet Banking".
 
 Un ejemplo de respuesta puede verse en: schemaForms.json
 
